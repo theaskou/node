@@ -59,3 +59,8 @@ Hvad kan man bruge det til hvis man kan køre javascript hvorsomhelst?
 - https://www.electronjs.org/
 
 [JSON dokumentation.](https://www.json.org/json-en.html)
+
+
+
+Staging = "Staging in Git refers to the process of preparing changes to be committed to the repository. It allows you to select specific files or changes to include in your next commit, giving you control over your project's history."
+
