@@ -64,3 +64,42 @@ Hvad kan man bruge det til hvis man kan køre javascript hvorsomhelst?
 
 Staging = "Staging in Git refers to the process of preparing changes to be committed to the repository. It allows you to select specific files or changes to include in your next commit, giving you control over your project's history."
 
+// --------------------------------------
+// Variables, strings, numbers, floats
+// --------------------------------------
+// Exercise 1 - Console and constiables
+
+const firstName = "Anders";
+const lastName = "Latif";
+
+// EXERCISE
+// show in the console
+// My first name is Anders and my last name is Latif
+
+console.log(`My first name is ${firstName} and my last name is ${lastName}`);
+// backticks `` = string template literal
+// ${} <- string interpolations - Betyder "at erstatte noget der eksisterer"
+
+// OBS det ville være en god ide at lave en variabel først, inden det printes.
+
+// --------------------------------------
+// Exercise 2 - Numbers and Strings
+
+const year = "2025";
+const increment = 1;
+
+// Add the year plus the increment
+// The result should be 2026
+// You cannot touch the first or the second line
+
+const currentYear = parseInt(year) + increment
+const currentYear2 = Number(year) + increment // Samme resultat. 
+// Hvad er forskellen? 
+// Number kan parse kommatal, parseInt parser til heltal. 
+// Begge typer bliver dog Number
+// console.log(parseInt("4ru248uj")) parser til int = 4248
+// console.log(Number("4ru248uj")) konstaterer om noget er number. = NaN
+
+
+console.log(currentYear);
+// --------------------------------------

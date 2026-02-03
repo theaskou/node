@@ -32,3 +32,11 @@ const person = {
 // ASI: Automatic semicolon insertion.
 // - ; ikke nødvendligt, men vær konsistent med om man bruger det eller ej = Clean code.
 // - Kan være problematisk i nogen tilfælde hvis man ikke gør det, fx når man returnerer objekter på flere linjer (?).
+
+// How to define strings in js:
+// ""
+// ''
+// ``
+
+// Der er ikke forskel på " og ' men man bryder med en string hvis man skal bruge quotations i sætningen fx.
+// Med backticks kan man bruge " og ' i en string, lave multiline strings, lave string interpolations ${} osv"
