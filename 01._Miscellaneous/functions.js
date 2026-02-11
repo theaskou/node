@@ -23,6 +23,7 @@ function genericActionPerformer(name, action) {
 }
 // "A function that accepts a callback parameter may be designed to call back before returning to its caller."
 // En funktionsreference der bliver sendt som argument.
+// "A callback funktion is a funtion that is passed as an argument to another function"
 // Hvad er dfordelen ved callback? Vi behøver ikke vente på at linjen bliver ledigt.
 // Har det noget med single thread at gøre? <- læs op på det.
 
