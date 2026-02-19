@@ -41,6 +41,16 @@ app.get("/bag", (req, res) => {
 
 // I et REST api, hvilken måde er den korrekte måde at sende data fra et GET endpoint?
 
+
+// Proxy = Når jeg req noget, og en server req en anden server, får response, og sender til klient.
+app.get("/proxy", (req, res) => {
+    const response = fetch ("https://www.google.com/")
+    .then((response) => response.text())
+    .then((result) => {
+        res.send(result);
+    });
+});
+
 // lytte på en port:
 app.listen(8080);
 // 8080 er standard for http.
