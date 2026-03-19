@@ -1,0 +1,1 @@
+<h1>Welcome to the first Svelte project</h1>

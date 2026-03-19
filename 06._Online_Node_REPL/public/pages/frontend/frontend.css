@@ -1,0 +1,22 @@
+#repl-code-output {
+    height: 60vh;
+    background-color: black;
+    color: white;
+    font-family: 'monospace';
+    font-size: 18px;
+    font-weight: bold;
+    overflow-y: auto;
+}
+
+#repl-input {
+    width: 40.8vw;
+    height: 2em;
+    background-color: black;
+    color: white;
+
+}
+
+#repl-code-error {
+    color: red;
+
+}

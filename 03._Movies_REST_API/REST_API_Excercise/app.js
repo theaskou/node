@@ -53,7 +53,7 @@ app.patch("/movies/:id", (req, res) => {
 app.delete("movies/:id", (req, res) => {
     const providedMovieId = Number(req.params.id);
     const foundMovieIndex = movies.findIndex((movie) => movie.id === providedMovieId);
-    if (foundMovieIndex === -1) {
+    if (foundMovieIndex === -1) { // sparer computation fremfor (!foundmovie) som til gengæld er mere læsbar.
         return res.status(404).send({ errorMessage : `No movie found by id: ${res.params.id}`});
 
     }

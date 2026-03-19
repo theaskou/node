@@ -13,6 +13,10 @@ app.get("/snowstorms", (req, res) => {
     res.send({ data : "Warning! A snowstorm is coming ❄️ ❄️"})
 });
 
+app.get('/forecast', (req, res) => {
+    res.redirect('/snowstorms')
+})
+
 // hvorfor er det bedst at sende JSON fremfor en string?
 // Vi skal serve noget data. Tekst bliver fortolket som html, så det kan parses/fortolkes vilkårligt.
 
@@ -48,7 +52,8 @@ app.get("/proxy", (req, res) => {
     .then((response) => response.text())
     .then((result) => {
         res.send(result);
-    });
+    })
+    
 });
 
 // lytte på en port:

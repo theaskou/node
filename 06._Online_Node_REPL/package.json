@@ -1,0 +1,22 @@
+{
+  "name": "online_node_repl",
+  "version": "0.0.1",
+  "description": "A website that allows you to run Node in a REEPL",
+  "keywords": [
+    "node",
+    "repl",
+    "website"
+  ],
+  "license": "MIT",
+  "author": "Thea Skou",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start-dev": "cross-env PORT=8080 NODE_DEV=ENV node app.js",
+    "start-prod": "cross-env PORT=80 node app.js"
+  },
+  "dependencies": {
+    "cross-env": "^10.1.0",
+    "express": "^5.2.1"
+  }
+}
