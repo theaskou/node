@@ -5,8 +5,27 @@
         isGirl,
         onShowLove,
         onEatCookie,
-        drinkFridge = $bindable()
+        drinkFridge = $bindable(),
     } = $props();
+
+    import { fridgeMessages } from "../../stores/fridgeStore.js";
+
+    let fridgeMessageInput = $state("");
+
+    function handleSubmitFridgeMessage() {
+        const fridgeMessageToCreate = {
+            name,
+            message: fridgeMessageInput
+        }
+        // $fridgeMessages.push(fridgeMessageToCreate);
+        // fridgeMessages.set($fridgeMessages);
+
+        fridgeMessages.update((fridgeMessageStoreValue) => {
+            fridgeMessageStoreValue.push(fridgeMessageToCreate);
+            return fridgeMessageStoreValue;
+        })
+        fridgeMessageInput= "";
+    }
 </script>
 
 <div
@@ -18,7 +37,8 @@
     <button onclick={() => onShowLove(name)}>Show love 💕</button>
     <button onclick={onEatCookie}>Eat cookie</button>
     <button onclick={() => drinkFridge.pop()}>Have a drink</button>
-
+    <input bind:value={fridgeMessageInput} placeholder="Type your message..." />
+    <button onclick={handleSubmitFridgeMessage}>Write the message</button>
 </div>
 
 <style>
