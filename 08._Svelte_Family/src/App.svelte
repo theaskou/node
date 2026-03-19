@@ -5,11 +5,11 @@
   const parents = ['Brian', 'Maiken']
   const children = [{
     name: "Anders",
-    isBlackSheep: true,
+    familySheep: "black-sheep",
   },
   {
     name: "Kristian",
-    isGreySheep: true,
+    familySheep: "grey-sheep",  
   },
   {
     name: "Mikkel",
