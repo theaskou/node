@@ -2,9 +2,6 @@ import express from 'express';
 
 const app = express();
 
-import helmet from "helmet"; // it's not a silver bullit, but it helps
-app.use(helmet()); // forstå hvorfor den skal kaldes med det samme. det er en function der indeholder req, res, next som parametre.
-
 import { rateLimit } from 'express-rate-limit';
 
 const generalLimiter = rateLimit({
@@ -16,6 +13,18 @@ const generalLimiter = rateLimit({
 	// store: ... , // Redis, Memcached, etc. See below.
 })
 
+import helmet from "helmet"; // it's not a silver bullit, but it helps
+app.use(helmet()); // forstå hvorfor den skal kaldes med det samme. det er en function der indeholder req, res, next som parametre.
+
+import session from 'express-session';
+
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false } // hvorfor false?
+}))
+
 // Apply the rate limiting middleware to all requests.
 app.use(generalLimiter);
 
@@ -24,6 +33,9 @@ app.use(middlewareRouter);
 
 import authRouter from './routers/authRouter.js';
 app.use(authRouter);
+
+import router from './routers/sessionRouter.js';
+app.use(router)
 
 
 // /{*splat} is the new syntax in Express 5.x, before it was just /*
