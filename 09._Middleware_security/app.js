@@ -1,3 +1,9 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+console.log(process.env.SESSION_SECRET);
+
 import express from 'express';
 
 const app = express();
@@ -19,7 +25,7 @@ app.use(helmet()); // forstå hvorfor den skal kaldes med det samme. det er en f
 import session from 'express-session';
 
 app.use(session({
-  secret: 'keyboard cat',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true,
   cookie: { secure: false } // hvorfor false?

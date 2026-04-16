@@ -22,5 +22,8 @@ router.get('/dogpark/shutup', (req, res) => {
 
 // sessions vil aldrig leakes til frontend? 
 
+// Hvordan virker det? Den laver en SID session ID, der bliver lagt ind i browseren
+// session jacking - tjek op på det. Det er efterhånden meget svært at gøre
+
 
 export default router;
